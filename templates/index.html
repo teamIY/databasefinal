@@ -1,17 +1,43 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>テストWebアプリ</title>
+    <title>drama_list</title>
 </head>
+<style>
+    th,td{
+        border:1px solid black;
+    }
+</style>
 <body>
-    <h1>index.html表示してます</h1>
-    <ul>
-        {% for user in insert_users %}
-            <li>ID: {{ user.id }}, Username: {{ user.username }}</li>
+    <h1>drama_listの表示</h1>
+    <table>
+        <tr>
+            <th>ポスター</th>
+            <th>タイトル</th>
+            <th>脚本家</th>
+            <th>監督</th>
+            <th>主題歌</th>
+            <th>放送期間</th>
+            <th>テレビ局</th>
+            <th>ジャンル</th>
+            <th>俳優</th>  
+        </tr>
+        {% for drama in insert_dramas %}
+            <tr>
+                <td><img src="data:image/jpeg;base64,{{ drama.img }}"/></td>
+                <td>{{ drama.title }}</td>
+                <td>{{ drama.screenwriter }}</td>
+                <td>{{ drama.director }}</td>
+                <td>{{ drama.themesong }} ({{drama.song_artist}})</td>
+                <td>{{ drama.start_date }} - {{ drama.end_date}}</td>
+                <td>{{ drama.tvstation }}</td>
+                <td>{{ drama.genre }}</td>
+                <td>{{ drama.actor1}}, {{drama.actor2}}, {{ drama.actor3 }}, {{ drama.actor4 }}, {{ drama.actor5 }}</td>
+            </tr>
         {% endfor %}
-    </ul>
+    </table>
 </body>
 </html>
