@@ -1,5 +1,7 @@
-from flask import Blueprint, render_template, jsonify
+from flask import Blueprint, render_template, request, jsonify
 from models.drama import Drama, db
+from datetime import datetime
+import logging
 
 drama_bp = Blueprint('drama_bp', __name__)
 
@@ -12,3 +14,16 @@ def index():
         return render_template('index.html', insert_dramas=drama_list)
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+    
+@drama_bp.route('/aaa')
+def show_aaa():
+    return render_template('aaa.html')
+
+    
+
+@drama_bp.route('/show_genre', methods=['POST'])
+def show_genre():
+    genre = request.form.get('genre')
+    dramas = Drama.query.filter_by(genre=genre).all()
+    return render_template('aaa2.html', genre=genre, dramas=dramas)
+

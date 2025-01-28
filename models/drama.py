@@ -23,3 +23,4 @@ class Drama(db.Model):
 
     def __repr__(self):
         return f'<Drama {self.title}>'
+    

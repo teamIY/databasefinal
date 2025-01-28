@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+  <html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>あいうえお</title>
+        <script src="{{ url_for('static', filename='bbb.js') }}"></script>
+        <!--<link rel="stylesheet"href="{{ url_for('static', filename='ccc.css') }}">-->
+
+        
+    </head>
+<body>
+    
+
+
+
+
+
+    <h1>選択項目: {{ season }} {{ genre }}</h1>
+    <ul>
+        {% for drama in dramas %}
+            <li>{{ drama.title }}</li>
+        {% endfor %}
+    </ul>
+</body>
