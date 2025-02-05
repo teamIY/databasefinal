@@ -2,7 +2,7 @@ from flask import Blueprint, render_template, request, jsonify
 from models.drama import Drama, db
 from datetime import datetime
 import logging
-from sqlalchemy import or_
+from sqlalchemy import or_, and_
 
 drama_bp = Blueprint('drama_bp', __name__)
 
@@ -31,8 +31,29 @@ def show_genre():
 @drama_bp.route('/show_season', methods=['POST'])
 def show_season():
     season = request.form.get('season')
-    dramas = Drama.query.filter_by(season=season).all()
+    year, season_name = season[:4], season[4:]
+    if season_name == "春":
+        start_month = 4
+    elif season_name == "夏":
+        start_month = 7
+    elif season_name == "秋":
+        start_month = 10
+    else:
+        start_month = 1
+        
+    start_season = datetime(int(year), start_month, 1)
+    end_season = datetime(int(year), start_month + 1, 1)  
+
+
+    dramas = Drama.query.filter(
+        and_(
+            Drama.start_date >= start_season,
+            Drama.start_date < end_season
+        )
+    ).all()
+
     return render_template('next.html', season=season, dramas=dramas)
+
 
 
 @drama_bp.route('/show_detail', methods=['POST'])

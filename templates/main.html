@@ -3,14 +3,16 @@
     <head>
         <meta charset="utf-8">
         <title>メイン画面</title>
-        <link rel="stylesheet" href="ddd.css">
-        <link rel="stylesheet" href="{{ url_for('static', filename='ddd.css') }}">  
+<!--      <link rel="stylesheet" href="ddd.css">-->
+      <link rel="stylesheet" href="{{ url_for('static', filename='ddd.css') }}">
     </head>
 <body>
 
 
     <div class="logo"> 
-<!--      <img src="{{ url_for('static', filename='タイトル.jpg') }}" alt="タイトル" title="ロゴ"> -->
+<!--     <img src="{{ url_for('static', filename='タイトル.jpg') }}" alt="タイトル" title="ロゴ"> -->
+
+     
     </div>
   
 
@@ -19,12 +21,12 @@
       <div class="header1">
        
         <div class="header-menu">
-          <a href="main.html">Top</a>
-        
-        
+          <a href="top.html">Top</a>
+         
       <div class="TV"> 
+   
         <img src="{{ url_for('static', filename='テレビ.png') }}" alt="テレビ" title="テレビ">
-
+       
       </div>
     
      
@@ -32,17 +34,17 @@
 
 </div>
 
-<form action="{{ url_for('drama_bp.show_detail') }}" method="post">
+<form action="{{ url_for('drama_bp.show_detail') }}" method="post"></form>
 <div class="kennsaku">
   <h1>文字検索</h1>
-  <input type="text" name="moji">
-  <input type="submit" value="検索" id="botan">
+  <input type="text"name="moji">
+  <input type="submit"value="検索"id="botan">
 </div>
-</form>
 
 
 
-<form action="{{ url_for('drama_bp.show_genre') }}" method="post">
+<form action="{{ url_for('drama_bp.show_genre') }}" method="post"></form>
+
     <div class="jyannru">
 
       <h1>ジャンルで検索</h1>
@@ -75,10 +77,10 @@
       </div>
 
     </div>
-</form>
 
 
-<form action="{{ url_for('drama_bp.show_season') }}" method="post">
+
+    <form action="{{ url_for('drama_bp.show_season') }}" method="post">
 <div class="nenndai">
   <h1>年代で検索</h1>
 
@@ -115,7 +117,7 @@
       </div>
 
 </div>
-</form>
+
 
    
 
