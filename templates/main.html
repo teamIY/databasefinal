@@ -35,16 +35,16 @@
 </div>
 
 
-<form action="{{ url_for('drama_bp.show_detail') }}" method="post">
+<form action="{{ url_for('drama_bp.show_search') }}" method="post">
 <div class="kennsaku">
   <h1>文字検索</h1>
   <input type="text"name="moji">
   <input type="submit"value="検索"id="botan">
 </div>
+</form>
 
 
-
-<form action="{{ url_for('drama_bp.show_genre') }}" method="post"></form>
+<form action="{{ url_for('drama_bp.show_genre') }}" method="post">
 <div class="jyannru">
   <h1>ジャンルで検索</h1>
 
@@ -76,7 +76,7 @@
       </div>
 
 </div>
-
+</form>
 
 <form action="{{ url_for('drama_bp.show_season') }}" method="post">
 <div class="nenndai">
@@ -115,6 +115,7 @@
       </div>
 
 </div>
+</form>
 
 
 

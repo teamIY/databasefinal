@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{ drama.title }}の詳細</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='ddd.css') }}">
+</head>
+<body>
+    <h1>「{{ drama.title }}」の詳細</h1>
+    <table>
+        <tr>
+            <th>タイトル</th>
+            <td>{{ drama.title }}</td>
+        </tr>
+        <tr>
+            <th>脚本家</th>
+            <td>{{ drama.screenwriter }}</td>
+        </tr>
+        <tr>
+            <th>監督</th>
+            <td>{{ drama.director }}</td>
+        </tr>
+        <tr>
+            <th>主題歌</th>
+            <td>{{ drama.themesong }} ({{ drama.song_artist }})</td>
+        </tr>
+        <tr>
+            <th>放送期間</th>
+            <td>{{ drama.start_date }} - {{ drama.end_date }}</td>
+        </tr>
+        <tr>
+            <th>テレビ局</th>
+            <td>{{ drama.tvstation }}</td>
+        </tr>
+        <tr>
+            <th>ジャンル</th>
+            <td>{{ drama.genre }}</td>
+        </tr>
+        <tr>
+            <th>俳優</th>
+            <td>{{ drama.actor1 }}, {{ drama.actor2 }}, {{ drama.actor3 }}, {{ drama.actor4 }}, {{ drama.actor5 }}</td>
+        </tr>
+    </table>
+</body>
+</html>

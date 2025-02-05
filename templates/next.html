@@ -9,9 +9,7 @@
 
     </head>
 <body>
-    
-
-    <h1>選択項目: {{ season }} {{ genre }}</h1>
+    <h1>検索項目: {{ season }} {{ genre }}</h1>
     <table>
         <tr>
             <th>タイトル</th>
@@ -25,7 +23,10 @@
         </tr>
         {% for drama in dramas %}
             <tr>
-                <td>{{ drama.title }}</td>
+                <td>
+                    <a href="{{url_for('drama_bp.show_detail', drama_id=drama.id)}}" method="post">
+                        {{ drama.title }}</a>
+                </td>
                 <td>{{ drama.screenwriter }}</td>
                 <td>{{ drama.director }}</td>
                 <td>{{ drama.themesong }} ({{drama.song_artist}})</td>
@@ -36,3 +37,4 @@
             </tr>
         {% endfor %}
     </table>
+    </form>
