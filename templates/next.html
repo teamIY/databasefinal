@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+  <html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>検索結果</title>
+       
+        <link rel="stylesheet"href="{{ url_for('static', filename='ddd.css') }}">
+
+
+    </head>
+<body>
+    
+
+    <h1>選択項目: {{ season }} {{ genre }}</h1>
+    <table>
+        <tr>
+            <th>タイトル</th>
+            <th>脚本家</th>
+            <th>監督</th>
+            <th>主題歌</th>
+            <th>放送期間</th>
+            <th>テレビ局</th>
+            <th>ジャンル</th>
+            <th>俳優</th>  
+        </tr>
+        {% for drama in dramas %}
+            <tr>
+                <td>{{ drama.title }}</td>
+                <td>{{ drama.screenwriter }}</td>
+                <td>{{ drama.director }}</td>
+                <td>{{ drama.themesong }} ({{drama.song_artist}})</td>
+                <td>{{ drama.start_date }} - {{ drama.end_date}}</td>
+                <td>{{ drama.tvstation }}</td>
+                <td>{{ drama.genre }}</td>
+                <td>{{ drama.actor1}}, {{drama.actor2}}, {{ drama.actor3 }}, {{ drama.actor4 }}, {{ drama.actor5 }}</td>
+            </tr>
+        {% endfor %}
+    </table>

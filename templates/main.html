@@ -4,13 +4,13 @@
         <meta charset="utf-8">
         <title>メイン画面</title>
         <link rel="stylesheet" href="ddd.css">
-        <link rel="stylesheet" href="{{ url_for('static', filename='ddd.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='ddd.css') }}">  
     </head>
 <body>
 
 
     <div class="logo"> 
-      <img src="{{ url_for('static', filename='タイトル.jpg') }}" alt="タイトル" title="ロゴ">
+<!--      <img src="{{ url_for('static', filename='タイトル.jpg') }}" alt="タイトル" title="ロゴ"> -->
     </div>
   
 
@@ -35,8 +35,8 @@
 <form action="{{ url_for('drama_bp.show_detail') }}" method="post">
 <div class="kennsaku">
   <h1>文字検索</h1>
-  <input type="text"name="moji">
-  <input type="submit"value="検索"id="botan">
+  <input type="text" name="moji">
+  <input type="submit" value="検索" id="botan">
 </div>
 </form>
 
