@@ -1,295 +1,303 @@
-
-
 /*背景*/
-    body{
-         background-color:#dcdddd;
-    }
-
-/*ヘッダー*/
-    .header{
-        display: flex;
-        justify-content: space-between;
-        position:relative;
-        background: #f3f0ea;
-        padding:70px;
-        
-    }
-
-/*ヘッダーの文字色*/
-    .header a{
-        color: #707070;
-        padding:0 10px;
-    }
-
-/*ヘッダー文字の位置*/   
-    .menu{
-        position: absolute;
-        right: 0;
-        top:0;
-        display: flex;
-        gap:20px;
-    }
-
-
-
-/*年代ボタンの位置*/
-    .nenndai{
-        position:absolute;
-        top: 400px;
-        left: 0px;
-        width: 100px;
-        height: 200px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px; 
-
-    }
-
-
-/*『詳細検索』の位置*/
-    .syousaikennsaku{
-        position:absolute;
-        top:10px;
-        left:400px;
-    }
-
-/*詳細検索の背景*/
-    .haiiro{
-        position: absolute;
-        top:200px;
-        left: 200px;
-        width:1200px;
-        height:650px;
-        background: #adadad;
-        z-index: 0;
-        padding:30px;
-        box-sizing: border-box;
-        display: flex;
-        align-items: flex-start;
-        gap: 20px;
-        
-    }
-
-    .jaynnrudekennsaku{
-        position: absolute;
-        top:10px;
-        right:100px;
-    }
-    
-/*ジャンルの背景 */
-    .jyannru{
-        position:absolute;
-        bottom:50px;/*上下*/
-        right:0px;/*左右*/
-        width: 500px;/*幅*/
-        height: 700px;/*高さ*/
-       background-color: #595857;
-        z-index: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 20px;
-        
-    }
-     
+body{
+    background-color:#dcdddd;
+ 
+ }
+ 
+ 
+ /*メニューの黒線*/
+ .haiiro{
+   position: absolute;
+   top:18vh;
+   left: 14vw;
+   width:86vw;
+   height:3vh;
+   background-color: #aaa;
+   z-index: 0;
+ 
+ }
+ 
+ 
+ 
+ 
+ 
+ /*メニュー右端のテレビ画像*/
+ .TV img{
+   position: flex-end;
+   width:8vw;
+   height:10vh;
+ 
+ }
+ 
+ 
+ /*ヘッダーの設定*/
+ .header1 {
+   display: flex;
+   justify-content: flex-end;
+   background: #F3F0EA;
+   padding: 5vh;
+   color: #707070;
+   font-size: 2vw;
+   padding-bottom: 10px;
+ 
+ }
+ 
+ 
+ /*ヘッダーメニューの並び*/
+ .header-menu{
+   display: flex;
+ 
+ }
+ 
+ 
+ /*ヘッダーメニューの文字色*/
+ .header1 .header-menu a {
+   text-decoration: none;
+   color: #707070;
+   padding: 0 20px;
+   margin-right: 100px;
+   margin-top: 30px;
+ 
+ }
+ 
+ 
+/*メニューに触ったときの線の色*/
+.header1 .header-menu a:hover {
+    border-bottom: 2px solid #FD5A5F;
+    padding-bottom: 10px;
+  
+  }
   
 
-/*詳細検索の位置*/
-    .box{
-        position:absolute;
-        top:80px;/*上下*/
-        left:70px;/*左右*/
-        padding: 20px;
-        z-index: 10;
-
-    }
-
-
-/*チェックボックス*/
-    .qqq{
-        position:absolute;
-        top:350px;/*上下*/
-        left:700px;/*左右*/
-        padding: 20px;
-        z-index: 10;
-
-        display: flex;
-        flex-direction: column; 
-        gap: 60px;
-        /*
-        display: fixed;
-        right: 200px;
-        flex-direction: row;
-        align-items: center;
-        gap:10px;*/
-    }
-
-
-   
-
-
-
-    .item{
-        position: absolute;
-        top:360px;
-        left: 750px;
-        width:140px;
-        height:70px;
-       
-        display: flex;
-        flex-direction: column; /* チェックボックスと画像を縦に配置 */
-      
-        gap:45px; /* チェックボックスと画像間の間隔 */
-
-       /*margin-left: 10px;*/
-    }
-
+ 
+ /*『民放＋NHK』のメイン画面のサイズ設定*/
+ .logo img{
+   position: fixed;
+   top:0;
+   left:0;
+/* width:50vw;*/
+   height:55vh;
+   z-index: 10;
+ 
+ }
+ 
+ 
+ /*『民放＋NHK』の他画面のサイズ設定*/
+ .logo2 img{
+   position: fixed;
+   top:0;
+   left:0;
+   width:400px;
+   height: 280px;
+   z-index: 10;
+ 
+ }
+ 
+ 
+ /*文字検索の詳細*/
+ .kennsaku{
+   position:absolute;
+   top:25vh;
+   right:5vw;
+   z-index: 5;
+ 
+ }
+ 
+ 
+ /*文字入力のテキストボックスのデザイン設定*/
+ input[type="text"] {
+   border: 3px solid black; 
+   padding: 5px;
+   border-radius: 5px; 
+   width: 30vw; 
+   height:4vh;
+   font-size: 16px; 
+ 
+ }
+ 
+ /*文字入力の検索ボタンのデザイン設定*/
+ input[id="botan"] {
+   border: 3px solid black; 
+   padding: 5px; 
+   border-radius: 5px; 
+   width: 7vw; 
+   height:6vh;
+   font-size: 16px; 
+ 
+ }
  
 
-    input[type="textbox"] {/*テキストボックスの線の太さ*/
-        border: 3px solid black; 
-        padding: 5px; 
-        border-radius: 5px; 
-        width: 300px; 
-        font-size: 16px; 
-    }
-
-
-
-
-
-    .logo img{/*メイン画面のロゴの設定*/
-    
-        position: fixed;
-        top:0;
-        left:0;
-        width:400px;
-        height: 280px;
-        z-index: 10;
-
-
-
-    }
-
-
-
-
-
-.kennsaku{
-    position:fixed;
-    top:750px;
-    left:950px;
-    z-index: 10;
-}
-
-
-    /* ジャンルボタン*/
-
-    .button_solid012 button {
-        background: white;
-        border-radius: 3px;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        max-width: 240px;
-        padding: 10px 25px;
-        color: #000;
-        transition: 0.3s ease-in-out;
-        font-weight: 600;
-        border: 2px solid #000;
-        z-index: 1;
-        border-radius: 5px;
-        text-decoration: none;/*線無し*/
-    }
-    .button_solid012 button:before {/*上*/
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background: white;
-        z-index: -1;
-        border: 2px solid #000;
-        border-radius: 5px;
-    }
-    .button_solid012 button:after {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        content: '';
-        -webkit-transition: all .3s;
-        transition: all .3s;
-        -webkit-transform: translate3d(0,0.40rem,-1rem);
-        transform: translate3d(0,0.40rem,-1rem);
-        border: 2px solid #000;
-        border-radius: inherit;
-        background: white;
-        -webkit-box-shadow: 0 0.6rem 0 0 rgb(0 0 0 / 20%);
-        box-shadow: 0 0.4rem 0 0 rgb(0 0 0 / 20%);
-        z-index: -2;
-    }
-    .button_solid012 button i {
-        position: absolute;
-        right: 9px;
-    }
-    .button_solid012 button:hover {
-        transform: translate3d(0,0.2rem,-1rem);
-    }
-    .button_solid012 button:hover:after {
-        transform: translate3d(0,0.2rem,-1rem);
-        box-shadow: 0 0.2rem 0 0 rgb(0 0 0 / 20%);
-    }
-
-
-/* 検索ボタン */
-.button014 button {
-    background: #eee;
-    position: fixed;
+ 
+  
+ /*『ジャンルで検索』の詳細設定*/
+ .jyannru{
+    position:absolute;
+    top:60vh;
+    left:10vw;
+    z-index: 5;
+  
+  }
+  
+  
+  /*一段目のボタンの詳細*/
+  .ichidannme{
     display: flex;
-    justify-content: space-around;
+    gap:2vw;
+    right:10vw;
+    position: relative;
+    right: 1vw;
+    margin-left: 2vw;
+    margin-bottom: 2vh;
+ 
+  }
+   /*二段目のボタンの詳細*/    
+ .nidannme{
+    display: flex;
+    gap:2vw;
+    position: relative;
+    right: 1vw;
+    margin-left: 2vw;
+   
+  }
+  
+  
+ /*『年代で検索』の詳細設定*/
+ .nenndai{
+    position:absolute;
+    top:55vh;
+    right:15vw;
+    z-index: 5;
+  
+  }
+  
+  
+  /*2023年のボタンの詳細*/
+  .ninennmae{
+    display: flex;
+    gap:2vw;
+    right:10vw;
+    position: relative;
+    right: 1vw;
+    margin-left: 2vw;
+  
+  
+  }
+  
+  /*2024年のボタンの詳細*/    
+  .ichinennmae{
+    display: flex;
+    gap:2vw;
+    position: relative;
+    right: 1vw;
+    margin-left: 2vw;
+   
+  }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* ボタンのデザイン詳細*/
+ .button_solid012 {
+    background: white;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: center;
     align-items: center;
     margin: 0 auto;
-    max-width: 240px;/*ボタンの幅*/
-    padding:25px 50px;/*ボタンの幅とか？*/
-    color: #313131;
+    max-width: 240px;
+    padding:1vw 2vw;
+    color: #000;
     transition: 0.3s ease-in-out;
-    font-weight: 1000;
-    text-decoration: none;
-}
-.button014 button::before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  width: calc(100% - 4px);
-  height: calc(100% - 4px);
-  border: 2px solid black;
-  transition: 0.2s;
-}
+    font-weight: 600;
+    border: 2px solid #000;
+    z-index: 1;
+    border-radius: 5px;
+    text-decoration: none;/*線無し*/
+ }
+ 
+ 
+ .button_solid012:before {/*上*/
+   content: "";
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   background: white;
+   z-index: -1;
+   border: 2px solid #000;
+   border-radius: 5px;
+ }
+ 
 
-.button014 button::after {
-  content: '';
-  width: 5px;
-  height: 5px;
-  border-top: 3px solid #333333;
-  border-right: 3px solid #333333;
-  transform: rotate(45deg);
-  margin-left: 10px;
-}
-
-.button014 button:hover::before {
-  top: 0;
-  left: 0;
-}
-
-.button014 button:hover {
-  text-decoration: none;
-  background-color: gray;
-}
-
-
-    /*ボタン→https://jito-site.com/radio-button-customize-css/*/
+ .button_solid012:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    -webkit-transform: translate3d(0,0.40rem,-1rem);
+    transform: translate3d(0,0.40rem,-1rem);
+    border: 2px solid #000;
+    border-radius: inherit;
+    background: white;
+    -webkit-box-shadow: 0 0.6rem 0 0 rgb(0 0 0 / 20%);
+    box-shadow: 0 0.4rem 0 0 rgb(0 0 0 / 20%);
+    z-index: -2;
+  }
+ 
+ 
+ .button_solid012 i {
+   position: absolute;
+   right: 9px;
+ }
+ 
+ .button_solid012:hover {
+   transform: translate3d(0,0.2rem,-1rem);
+ }
+ 
+ .button_solid012:hover:after {
+   transform: translate3d(0,0.2rem,-1rem);
+   box-shadow: 0 0.2rem 0 0 rgb(0 0 0 / 20%);
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ h2{
+   position: absolute;
+   top: 200px; /* 上に移動 */
+   left:500px; /* 表と少し距離を取る */
+ }
+ 
+ 
+ .hyou {
+   position:absolute;
+   top:350px;/*表の上下*/
+   right:100px;
+   border-collapse: collapse;
+   border: 3px solid #333;
+   
+ }
+ 
+ 
+ .hyou th, .hyou td{
+   border:3px solid #333;
+   padding:5px;
+  
+ }
+ 
+  
