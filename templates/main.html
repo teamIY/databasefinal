@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+  <html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>メイン画面</title>
+<!--      <link rel="stylesheet" href="ddd.css">-->
+      <link rel="stylesheet" href="{{ url_for('static', filename='ddd.css') }}">
+    </head>
+<body>
+
+
+    <div class="logo"> 
+<!--     <img src="{{ url_for('static', filename='タイトル.jpg') }}" alt="タイトル" title="ロゴ"> -->
+
+     
+    </div>
+  
+
+
+<div class="haiiro"></div>
+      <div class="header1">
+       
+        <div class="header-menu">
+          <a href="top.html">Top</a>
+         
+      <div class="TV"> 
+   
+        <img src="{{ url_for('static', filename='テレビ.png') }}" alt="テレビ" title="テレビ">
+       
+      </div>
+    
+     
+      </div>
+
+</div>
+
+<form action="{{ url_for('drama_bp.show_detail') }}" method="post"></form>
+<div class="kennsaku">
+  <h1>文字検索</h1>
+  <input type="text"name="moji">
+  <input type="submit"value="検索"id="botan">
+</div>
+
+
+
+<form action="{{ url_for('drama_bp.show_genre') }}" method="post"></form>
+
+    <div class="jyannru">
+
+      <h1>ジャンルで検索</h1>
+          <div class="bunnrui1">
+            
+                
+                  <button type="submit" name="genre" value="ラブ"class="button_solid012" >ラブ</button>
+               
+
+                  <button type="submit" name="genre" value="ラブコメ" class="button_solid012">ラブコメ</button>
+           
+
+                  <button type="submit" name="genre" value="コメディ" class="button_solid012">コメディ</button>
+          </div>
+
+    
+
+
+      <div class="bunnrui2">
+           
+              <button type="submit" name="genre" value="サスペンス" class="button_solid012">サスペンス</button>
+          
+
+              <button type="submit" name="genre" value="ミステリー" class="button_solid012">ミステリー</button>
+            
+
+              <button type="submit" name="genre" value="ヒューマン" class="button_solid012">ヒューマン</button>
+          
+      
+      </div>
+
+    </div>
+
+
+
+    <form action="{{ url_for('drama_bp.show_season') }}" method="post">
+<div class="nenndai">
+  <h1>年代で検索</h1>
+
+      <h3>▶2023</h3>
+      <div class="ninennmae">
+        
+          <button type="submit" name="season" value="2023春" class="button_solid012">春</button>
+      
+      
+          <button type="submit" name="season" value="2023夏" class="button_solid012">夏</button>
+      
+      
+          <button type="submit" name="season" value="2023秋" class="button_solid012">秋</button>
+      
+
+          <button type="submit" name="season" value="2023冬" class="button_solid012">冬</button>
+
+      </div>
+
+      <h3>▶2024</h3>
+      <div class="ichinennmae">
+          <button type="submit" name="season" value="2024春" class="button_solid012">春</button>
+      
+      
+          <button type="submit" name="season" value="2024夏" class="button_solid012">夏</button>
+
+      
+          <button type="submit" name="season" value="2024秋" class="button_solid012">秋</button>
+      
+
+          <button type="submit" name="season" value="2024冬" class="button_solid012">冬</button>
+      
+      
+      </div>
+
+</div>
+
+
+   
+
+
+
+    
+    
+ 
+
+
+</body>
+
+    
+</html>
