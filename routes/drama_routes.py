@@ -54,24 +54,33 @@ def show_season():
 
     return render_template('next.html', season=season, dramas=dramas)
 
-
-
-@drama_bp.route('/show_detail', methods=['POST'])
-def show_detail():
-    moji = request.form.get('moji')
-    dramas = Drama.query.filter(
+def filter_drama(keyword):
+    return  Drama.query.filter(
         or_(
-            Drama.title.like(f"%{moji}%"),
-            Drama.screenwriter.like(f"%{moji}%"),
-            Drama.director.like(f"%{moji}%"),
-            Drama.themesong.like(f"%{moji}%"),
-            Drama.song_artist.like(f"%{moji}%"),
-            Drama.tvstation.like(f"%{moji}%"),
-            Drama.actor1.like(f"%{moji}%"),
-            Drama.actor2.like(f"%{moji}%"),
-            Drama.actor3.like(f"%{moji}%"),
-            Drama.actor4.like(f"%{moji}%"),
-            Drama.actor5.like(f"%{moji}%")
+            Drama.title.like(f"%{keyword}%"),
+            Drama.screenwriter.like(f"%{keyword}%"),
+            Drama.director.like(f"%{keyword}%"),
+            Drama.themesong.like(f"%{keyword}%"),
+            Drama.song_artist.like(f"%{keyword}%"),
+            Drama.tvstation.like(f"%{keyword}%"),
+            Drama.actor1.like(f"%{keyword}%"),
+            Drama.actor2.like(f"%{keyword}%"),
+            Drama.actor3.like(f"%{keyword}%"),
+            Drama.actor4.like(f"%{keyword}%"),
+            Drama.actor5.like(f"%{keyword}%")
         )
-    ).all()
+    )
+
+@drama_bp.route('/show_search', methods=['POST'])
+def show_search():
+    moji = request.form.get('moji')
+    dramas = filter_drama(moji).all()
     return render_template('next.html', title=moji, dramas=dramas)
+
+
+@drama_bp.route('/show_detail/<int:drama_id>', methods=['get'])
+def show_detail(drama_id):
+    drama = Drama.query.get(drama_id)  
+    return render_template('detail.html', drama=drama)
+
+
