@@ -1,303 +1,270 @@
 /*背景*/
-body{
-    background-color:#dcdddd;
- 
- }
- 
- 
- /*メニューの黒線*/
- .haiiro{
-   position: absolute;
-   top:18vh;
-   left: 14vw;
-   width:86vw;
-   height:3vh;
-   background-color: #aaa;
-   z-index: 0;
- 
- }
- 
- 
- 
- 
- 
- /*メニュー右端のテレビ画像*/
- .TV img{
-   position: flex-end;
-   width:8vw;
-   height:10vh;
- 
- }
- 
- 
- /*ヘッダーの設定*/
- .header1 {
-   display: flex;
-   justify-content: flex-end;
-   background: #F3F0EA;
-   padding: 5vh;
-   color: #707070;
-   font-size: 2vw;
-   padding-bottom: 10px;
- 
- }
- 
- 
- /*ヘッダーメニューの並び*/
- .header-menu{
-   display: flex;
- 
- }
- 
- 
- /*ヘッダーメニューの文字色*/
- .header1 .header-menu a {
-   text-decoration: none;
-   color: #707070;
-   padding: 0 20px;
-   margin-right: 100px;
-   margin-top: 30px;
- 
- }
- 
- 
-/*メニューに触ったときの線の色*/
-.header1 .header-menu a:hover {
-    border-bottom: 2px solid #FD5A5F;
-    padding-bottom: 10px;
-  
-  }
-  
+body {
+  background-color: #dcdddd;
+}
 
- 
- /*『民放＋NHK』のメイン画面のサイズ設定*/
- .logo img{
-   position: fixed;
-   top:0;
-   left:0;
-/* width:50vw;*/
-   height:55vh;
-   z-index: 10;
- 
- }
- 
- 
- /*『民放＋NHK』の他画面のサイズ設定*/
- .logo2 img{
-   position: fixed;
-   top:0;
-   left:0;
-   width:400px;
-   height: 280px;
-   z-index: 10;
- 
- }
- 
- 
- /*文字検索の詳細*/
- .kennsaku{
-   position:absolute;
-   top:25vh;
-   right:5vw;
-   z-index: 5;
- 
- }
- 
- 
- /*文字入力のテキストボックスのデザイン設定*/
- input[type="text"] {
-   border: 3px solid black; 
-   padding: 5px;
-   border-radius: 5px; 
-   width: 30vw; 
-   height:4vh;
-   font-size: 16px; 
- 
- }
- 
- /*文字入力の検索ボタンのデザイン設定*/
- input[id="botan"] {
-   border: 3px solid black; 
-   padding: 5px; 
-   border-radius: 5px; 
-   width: 7vw; 
-   height:6vh;
-   font-size: 16px; 
- 
- }
- 
+/*メニューの黒線*/
+.haiiro {
+  position: absolute;
+  top: 18vh;
+  left: 14vw;
+  width: 86vw;
+  height: 3vh;
+  background-color: #aaa;
+  z-index: 0;
+}
 
- 
-  
- /*『ジャンルで検索』の詳細設定*/
- .jyannru{
-    position:absolute;
-    top:60vh;
-    left:10vw;
-    z-index: 5;
-  
-  }
-  
-  
-  /*一段目のボタンの詳細*/
-  .ichidannme{
-    display: flex;
-    gap:2vw;
-    right:10vw;
-    position: relative;
-    right: 1vw;
-    margin-left: 2vw;
-    margin-bottom: 2vh;
- 
-  }
-   /*二段目のボタンの詳細*/    
- .nidannme{
-    display: flex;
-    gap:2vw;
-    position: relative;
-    right: 1vw;
-    margin-left: 2vw;
-   
-  }
-  
-  
- /*『年代で検索』の詳細設定*/
- .nenndai{
-    position:absolute;
-    top:55vh;
-    right:15vw;
-    z-index: 5;
-  
-  }
-  
-  
-  /*2023年のボタンの詳細*/
-  .ninennmae{
-    display: flex;
-    gap:2vw;
-    right:10vw;
-    position: relative;
-    right: 1vw;
-    margin-left: 2vw;
-  
-  
-  }
-  
-  /*2024年のボタンの詳細*/    
-  .ichinennmae{
-    display: flex;
-    gap:2vw;
-    position: relative;
-    right: 1vw;
-    margin-left: 2vw;
-   
-  }
- 
- 
- 
- 
- 
- 
- 
- 
- /* ボタンのデザイン詳細*/
- .button_solid012 {
-    background: white;
-    border-radius: 3px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 240px;
-    padding:1vw 2vw;
-    color: #000;
-    transition: 0.3s ease-in-out;
-    font-weight: 600;
-    border: 2px solid #000;
-    z-index: 1;
-    border-radius: 5px;
-    text-decoration: none;/*線無し*/
- }
- 
- 
- .button_solid012:before {/*上*/
-   content: "";
-   width: 100%;
-   height: 100%;
-   position: absolute;
-   background: white;
-   z-index: -1;
-   border: 2px solid #000;
-   border-radius: 5px;
- }
- 
+/*メニュー右端のテレビ画像*/
+.TV img {
+  position: absolute;
+  right: 5vw;
+  top: 5vh;
+  height: 10vh;
+}
 
- .button_solid012:after {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    content: '';
-    -webkit-transition: all .3s;
-    transition: all .3s;
-    -webkit-transform: translate3d(0,0.40rem,-1rem);
-    transform: translate3d(0,0.40rem,-1rem);
-    border: 2px solid #000;
-    border-radius: inherit;
-    background: white;
-    -webkit-box-shadow: 0 0.6rem 0 0 rgb(0 0 0 / 20%);
-    box-shadow: 0 0.4rem 0 0 rgb(0 0 0 / 20%);
-    z-index: -2;
-  }
- 
- 
- .button_solid012 i {
-   position: absolute;
-   right: 9px;
- }
- 
- .button_solid012:hover {
-   transform: translate3d(0,0.2rem,-1rem);
- }
- 
- .button_solid012:hover:after {
-   transform: translate3d(0,0.2rem,-1rem);
-   box-shadow: 0 0.2rem 0 0 rgb(0 0 0 / 20%);
- }
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- h2{
-   position: absolute;
-   top: 200px; /* 上に移動 */
-   left:500px; /* 表と少し距離を取る */
- }
- 
- 
- .hyou {
-   position:absolute;
-   top:350px;/*表の上下*/
-   right:100px;
-   border-collapse: collapse;
-   border: 3px solid #333;
-   
- }
- 
- 
- .hyou th, .hyou td{
-   border:3px solid #333;
-   padding:5px;
-  
- }
- 
-  
+/*ヘッダーの設定*/
+.header1 {
+  display: flex;
+  justify-content: flex-end;
+  background: #F3F0EA;
+  height: 18vh;
+  color: #707070;
+  font-size: 2vw;
+}
+
+/*ヘッダーメニューの並び*/
+.header-menu {
+  display: flex;
+}
+
+.logo img{
+  position: fixed;
+  top:0;
+  left:0;
+  height: 50vh;
+  z-index: 10;
+
+}
+
+/*『民放＋NHK』の他画面のサイズ設定*/
+.logo2 img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 35vh;
+  z-index: 10;
+}
+
+/*文字検索の詳細*/
+.kennsaku {
+  position: absolute;
+  top: 25vh;
+  right: 5vw;
+  z-index: 5;
+}
+
+/*文字入力のテキストボックスのデザイン設定*/
+input[type="text"] {
+  border: 3px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  width: 30vw;
+  height: 4vh;
+  font-size: 16px;
+}
+
+/*文字入力の検索ボタンのデザイン設定*/
+input[id="botan"] {
+  border: 3px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  width: 7vw;
+  height: 6vh;
+  font-size: 16px;
+}
+
+/*『ジャンルで検索』の詳細設定*/
+.jyannru {
+  position: absolute;
+  top: 60vh;
+  left: 10vw;
+  z-index: 5;
+}
+
+/*一段目のボタンの詳細*/
+.ichidannme {
+  display: flex;
+  gap: 2vw;
+  margin-left: 2vw;
+  margin-bottom: 8vh;
+}
+
+/*二段目のボタンの詳細*/
+.nidannme {
+  display: flex;
+  gap: 2vw;
+  margin-left: 2vw;
+}
+
+/*『年代で検索』の詳細設定*/
+.nenndai {
+  position: absolute;
+  top: 55vh;
+  right: 15vw;
+  z-index: 5;
+}
+
+/*2023年のボタンの詳細*/
+.ninennmae {
+  display: flex;
+  gap: 2vw;
+  margin-left: 2vw;
+}
+
+/*2024年のボタンの詳細*/
+.ichinennmae {
+  display: flex;
+  gap: 2vw;
+  margin-left: 2vw;
+}
+
+/* ボタンのデザイン詳細*/
+.button_solid012 {
+  background: white;
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 240px;
+  padding: 1vw 2vw;
+  color: #000;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+  border: 2px solid #000;
+  z-index: 1;
+  border-radius: 5px;
+  text-decoration: none; 
+}
+
+.button_solid012:before {
+  /*上*/
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: white;
+  z-index: -1;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+.button_solid012:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-transform: translate3d(0, 0.40rem, -1rem);
+  transform: translate3d(0, 0.40rem, -1rem);
+  border: 2px solid #000;
+  border-radius: inherit;
+  background: white;
+  -webkit-box-shadow: 0 0.6rem 0 0 rgb(0 0 0 / 20%);
+  box-shadow: 0 0.4rem 0 0 rgb(0 0 0 / 20%);
+  z-index: -2;
+}
+
+.button_solid012 i {
+  position: absolute;
+  right: 9px;
+}
+
+.button_solid012:hover {
+  transform: translate3d(0, 0.2rem, -1rem);
+}
+
+.button_solid012:hover:after {
+  transform: translate3d(0, 0.2rem, -1rem);
+  box-shadow: 0 0.2rem 0 0 rgb(0 0 0 / 20%);
+}
+
+.kennsakukekka {
+  position: absolute;
+  top: 35vh;
+  left: 15vw;
+}
+
+/*検索結果画面の表の設定*/
+.hyou {
+  position: absolute;
+  top: 50vh; 
+  left: 5vw;
+  right: 5vw;
+  border-collapse: collapse;
+  border: 3px solid #333;
+}
+
+/*作品詳細画面の表の設定*/
+.hyou2 {
+  position: absolute;
+  width: 41vw;
+  height: 5vh;
+  right: 5vw;
+  border-collapse: collapse;
+  border: 3px solid #333;
+}
+
+/*検索＋作品詳細画面の共通の表の設定*/
+.hyou th, .hyou td {
+  border: 3px solid #333;
+  text-align: right; 
+}
+
+/*作品詳細画面のキービジュアルの設定*/
+.posuta img {
+  position: absolute;
+  top: 40vh;
+  left: 5vw;
+  height: 50vh;
+}
+
+/*作品詳細画面の説明の位置*/
+#setumei {
+  position: absolute;
+  top: 40vh;
+  left: 55vw;
+  width: 40vw;
+}
+
+/*作品詳細画面の題名の位置*/
+.daimei {
+  position: absolute;
+  top: 35vh;
+  left: 55vw;
+}
+
+/*作品詳細画面の戻るボタン*/
+#modoru {
+  position: absolute;
+  bottom: 5vh;
+  right: 5vw;
+}
+
+/*文字入力の検索ボタンのデザイン設定*/
+input[id="modoru"] {
+  border: 3px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  width: 17vw;
+  height: 6vh;
+  font-size: 16px;
+}
+
+#poster_next {
+  width: 20vw; 
+}
