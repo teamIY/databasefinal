@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>{{ drama.title }}の詳細</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='ccc.css') }}">
+</head>
+<body>
+    <div class="logo2">
+        <img src="{{ url_for('static', filename='タイトル.jpg') }}" alt="タイトル" title="ロゴ">
+    </div>
+
+    <div class="header1">
+
+
+    <div class="haiiro"></div>
+
+    <div class="TV"> 
+        <img src="{{ url_for('static', filename='テレビ.png') }}" alt="テレビ" title="テレビ">
+    </div>
+</div>
+    <div class="posuta">
+        <img src="{{ url_for('static', filename='ポスターサンプル.png') }}">
+    </div>
+
+    <div id="setumei">
+        <h1>{{ drama.title }}</h1>
+        <table class="hyou2">
+            <tr>
+                <th>脚本家</th>
+                <td>{{ drama.screenwriter }}</td>
+            </tr>
+            <tr>
+                <th>監督</th>
+                <td>{{ drama.director }}</td>
+            </tr>
+            <tr>
+                <th>主題歌</th>
+                <td>{{ drama.themesong }} ({{ drama.song_artist }})</td>
+            </tr>
+            <tr>
+                <th>放送期間</th>
+                <td>{{ drama.start_date }} - {{ drama.end_date }}</td>
+            </tr>
+            <tr>
+                <th>テレビ局</th>
+                <td>{{ drama.tvstation }}</td>
+            </tr>
+            <tr>
+                <th>ジャンル</th>
+                <td>{{ drama.genre }}</td>
+            </tr>
+            <tr>
+                <th>俳優</th>
+                <td>{{ drama.actor1 }}, {{ drama.actor2 }}, {{ drama.actor3 }}, {{ drama.actor4 }}, {{ drama.actor5 }}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

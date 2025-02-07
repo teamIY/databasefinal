@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from config import Config
 from models.drama import db
 from routes.drama_routes import drama_bp

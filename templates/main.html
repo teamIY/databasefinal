@@ -3,36 +3,32 @@
     <head>
         <meta charset="utf-8">
         <title>メイン画面</title>
-        <link rel="stylesheet" href="ddd.css">
-        <link rel="stylesheet" href="{{ url_for('static', filename='ddd.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='ccc.css') }}">
     </head>
 <body>
 
 
-    <div class="logo"> 
-      <img src="{{ url_for('static', filename='タイトル.jpg') }}" alt="タイトル" title="ロゴ">
-    </div>
-  
+  <div class="logo">
+    <img src="{{ url_for('static', filename='タイトル.jpg') }}" alt="タイトル" title="ロゴ">
+</div>
+
+<div class="header1">
 
 
 <div class="haiiro"></div>
-      <div class="header1">
-       
-        <div class="header-menu">
-          <a href="main.html">Top</a>
-        
-        
-      <div class="TV"> 
-        <img src="{{ url_for('static', filename='テレビ.png') }}" alt="テレビ" title="テレビ">
 
-      </div>
-    
-     
-      </div>
-
+<div class="TV"> 
+    <img src="{{ url_for('static', filename='テレビ.png') }}" alt="テレビ" title="テレビ">
+</div>
 </div>
 
-<form action="{{ url_for('drama_bp.show_detail') }}" method="post">
+
+<div class="haiiro">
+</div>
+</div>
+
+
+<form action="{{ url_for('drama_bp.show_search') }}" method="post">
 <div class="kennsaku">
   <h1>文字検索</h1>
   <input type="text"name="moji">
@@ -41,42 +37,39 @@
 </form>
 
 
-
 <form action="{{ url_for('drama_bp.show_genre') }}" method="post">
-    <div class="jyannru">
-
-      <h1>ジャンルで検索</h1>
-          <div class="bunnrui1">
-            
-                
-                  <button type="submit" name="genre" value="ラブ"class="button_solid012" >ラブ</button>
-               
-
-                  <button type="submit" name="genre" value="ラブコメ" class="button_solid012">ラブコメ</button>
-           
-
-                  <button type="submit" name="genre" value="コメディ" class="button_solid012">コメディ</button>
-          </div>
+<div class="jyannru">
+  <h1>ジャンルで検索</h1>
 
     
+      <div class="ichidannme">
+        
+        <button type="submit" name="genre" value="ラブ"class="button_solid012" >ラブ</button>
+               
 
+        <button type="submit" name="genre" value="ラブコメ" class="button_solid012">ラブコメ</button>
+ 
 
-      <div class="bunnrui2">
-           
-              <button type="submit" name="genre" value="サスペンス" class="button_solid012">サスペンス</button>
+        <button type="submit" name="genre" value="コメディ" class="button_solid012">コメディ</button>
+
+      </div>
+
+      <div class="nidannme">
+        
+      
+        <button type="submit" name="genre" value="サスペンス" class="button_solid012">サスペンス</button>
           
 
-              <button type="submit" name="genre" value="ミステリー" class="button_solid012">ミステリー</button>
-            
+        <button type="submit" name="genre" value="ミステリー" class="button_solid012">ミステリ―</button>
+      
 
-              <button type="submit" name="genre" value="ヒューマン" class="button_solid012">ヒューマン</button>
-          
+        <button type="submit" name="genre" value="ヒューマン" class="button_solid012">ヒューマン</button>
+    
       
       </div>
 
-    </div>
+</div>
 </form>
-
 
 <form action="{{ url_for('drama_bp.show_season') }}" method="post">
 <div class="nenndai">
@@ -117,7 +110,7 @@
 </div>
 </form>
 
-   
+
 
 
 
