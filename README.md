@@ -12,7 +12,6 @@
  cd databasefinal
  pip install flask
  pip install dotenv
- pip install flask
  pip install datetime
  pip install sqlalchemy
  pip install logging
