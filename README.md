@@ -16,7 +16,7 @@
  pip install datetime
  pip install sqlalchemy
  pip install logging
-    ```
+```
 3. アプリケーション実行
 ```bash 
  python app.py
